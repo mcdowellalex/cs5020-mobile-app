@@ -1,10 +1,17 @@
 import React from "react";
-import { View, Text, StyleSheet, } from "react-native";
+import { View, Text, StyleSheet, Linking } from "react-native";
 
 export const ResourceText = props => {
 
     return(
-        <Text onPress={() => window.open(props.link)} style={styles.clickable}>{props.text}</Text>
+        <Text 
+            style={styles.clickable}
+            onPress={() => Linking.canOpenURL(props.link).then(() => {
+                Linking.openURL(props.link)
+            })} 
+        >
+            {props.text}
+        </Text>
     
   )
 }

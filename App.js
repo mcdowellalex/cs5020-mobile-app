@@ -9,6 +9,7 @@ import {FiveComponentsPage} from './pages/FiveComponentsPage';
 import {SpeedTestPage} from './pages/SpeedTestPage';
 import {FuturePage} from './pages/FuturePage';
 import {SOTAPage} from './pages/SOTAPage';
+import {MapViewPage} from './pages/MapViewPage';
 // import { setCustomText } from 'react-native-global-props';
 
 const MainNavigator = createDrawerNavigator( 
@@ -40,6 +41,13 @@ const MainNavigator = createDrawerNavigator(
       },
       screen: FuturePage
     },
+
+    MapViewPage: {
+      navigationOptions: {
+        drawerLabel: "Cell map of St Andrews"
+      },
+      screen: MapViewPage
+    },
     
     SpeedTestPage: {
       navigationOptions: {
@@ -54,6 +62,8 @@ const MainNavigator = createDrawerNavigator(
       },
       screen: ResourcesPage
     },
+
+
 
   },
   {

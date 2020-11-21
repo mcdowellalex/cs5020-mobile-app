@@ -9,8 +9,8 @@ import {color} from '../globalVariables'
 
 const CustomHeader = (props) => {
   return( 
-    <View style={{height: 80+Constants.statusBarHeight, paddingTop:Constants.statusBarHeight, marginBottom:40}}>
-      <View style={{height:15, backgroundColor:color}}/>
+    <View style={{marginBottom:10}}>
+      <View style={{height: 15+Constants.statusBarHeight, backgroundColor:color}}/>
       <View style={styles.container}> 
         <Ionicons
           name="md-menu"

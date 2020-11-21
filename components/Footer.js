@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, } from "react-native";
 import {color} from '../globalVariables'
+import { ResourceText } from "./ResourceText";
 
 export const Footer = props => {
 
@@ -11,8 +12,8 @@ export const Footer = props => {
         <View style={styles.line} />
         <View style={styles.container}>
             <Text>Alex McDowell</Text>
-            <Text style={{color:'blue'}} onPress={() => window.open('https://github.com/mcdowellalex')}>Github</Text>
-            <Text style={{color:'blue'}} onPress={() => window.open('https://alexmcdowell.netlify.app/')}>Personal Site</Text>
+            <ResourceText link='https://github.com/mcdowellalex' text='GitHub' />
+            <ResourceText link='https://alexmcdowell.netlify.app/' text='Personal Site' />
         </View>
         
     </View>

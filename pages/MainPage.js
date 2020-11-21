@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { View, ScrollView,StyleSheet, Text, Image } from "react-native";
+import { View, ScrollView,StyleSheet, Text, Image, Dimensions } from "react-native";
 
 import CustomHeader from "../components/CustomHeader";
-import {Footer} from '../components/Footer'
+import {Footer} from '../components/Footer';
 
 
 
@@ -95,5 +95,6 @@ const styles = StyleSheet.create({
   lottie: {
     width: 100,
     height: 100
-  }
+  },
+  
 });
