@@ -1,21 +1,65 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { createAppContainer } from "react-navigation";
+import { createDrawerNavigator } from 'react-navigation-drawer';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+import CustomDrawerNavigator from "./components/CustomDrawerNavigator";
+import {MainPage} from "./pages/MainPage";
+import {ResourcesPage} from "./pages/ResourcesPage";
+import {TechnicalPage} from './pages/TechnicalPage';
+import {SpeedTestPage} from './pages/SpeedTestPage';
+import {FuturePage} from './pages/FuturePage';
+import {SOTAPage} from './pages/SOTAPage';
+// import { setCustomText } from 'react-native-global-props';
+
+const MainNavigator = createDrawerNavigator( 
+  {
+    MainPage: {
+      navigationOptions: {
+        drawerLabel: "Main"
+      },
+      screen: MainPage 
+    },
+
+    TechnicalPage: {
+      navigationOptions: {
+        drawerLabel: "5 Components of 5G"
+      },
+      screen: TechnicalPage
+    },
+
+    SOTAPage:{
+      navigationOptions: {
+        drawerLabel: "State of the Art"
+      },
+      screen: SOTAPage
+    },
+
+    FuturePage: {
+      navigationOptions: {
+        drawerLabel: "Future of 5G"
+      },
+      screen: FuturePage
+    },
+    
+    SpeedTestPage: {
+      navigationOptions: {
+        drawerLabel: "Speed Test"
+      },
+      screen: SpeedTestPage
+    },
+
+    ResourcesPage: {
+      navigationOptions: {
+        drawerLabel: "Extra Resources"
+      },
+      screen: ResourcesPage
+    },
+
   },
-});
+  {
+    contentComponent: CustomDrawerNavigator
+  }
+);
+
+const MainApp = createAppContainer(MainNavigator);
+export default MainApp;
