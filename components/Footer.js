@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, } from "react-native";
+import {color} from '../globalVariables'
 
 export const Footer = props => {
 
@@ -22,11 +23,12 @@ export const Footer = props => {
 const styles = StyleSheet.create({
     container:{
         marginLeft:'5%',
-        marginRight:'5%'
+        marginRight:'5%',
+        marginBottom:20
     },
     line:{
         marginTop:40,
-        marginBottom: 10,
+        marginBottom: 20,
         borderBottomWidth: 0.5,
         borderColor:'#c2c2c2' ,
     },

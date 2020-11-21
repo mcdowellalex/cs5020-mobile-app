@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { View, ScrollView,StyleSheet, Text, Button } from "react-native";
+import { View, ScrollView,StyleSheet, Text } from "react-native";
 
 import CustomHeader from "../components/CustomHeader";
 import {CustomButton} from '../components/CustomButton';
-
 
 
 
@@ -11,22 +10,23 @@ export const SpeedTestPage = props => {
   const [speedMbps, setSpeedMbps] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
 
+
   var imageAddr = "https://alexmcdowell.netlify.app/static/itInventory2-5fe52a9bcff2fa73c5f640fd05774926.jpg"; 
   var downloadSize = 2583573; //bytes
-
-
+  
+  
   // https://stackoverflow.com/questions/5529718/how-to-detect-internet-speed-in-javascript#:~:text=length%3B%20var%20time%20%3D%20(endTime,send()%3B
   function InitiateSpeedDetection() {
       console.log("Loading the image, please wait...");
       window.setTimeout(MeasureConnectionSpeed, 1);
   };    
-
+  
   if (window.addEventListener) {
       window.addEventListener('load', InitiateSpeedDetection, false);
   } else if (window.attachEvent) {
       window.attachEvent('onload', InitiateSpeedDetection);
   }
-
+  
   function MeasureConnectionSpeed() {
       var startTime, endTime;
       var download =  new Image();

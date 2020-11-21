@@ -8,7 +8,6 @@ import {color} from '../globalVariables'
 
 
 const CustomHeader = (props) => {
-
   return( 
     <View style={{height: 80+Constants.statusBarHeight, paddingTop:Constants.statusBarHeight, marginBottom:40}}>
       <View style={{height:15, backgroundColor:color}}/>

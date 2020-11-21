@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, ScrollView,StyleSheet, Text, Button } from "react-native";
+import { View, ScrollView,StyleSheet, Text, Image } from "react-native";
 
 import CustomHeader from "../components/CustomHeader";
 
@@ -9,26 +9,40 @@ import CustomHeader from "../components/CustomHeader";
 export const SOTAPage = props => {
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView>
       <CustomHeader 
         navigation={props.navigation} //call props.navigation in component
         text = "State of the Art"
       />  
       
       <View>
-          {/* current state of the art */}
-          <View>
-
-          </View>
+            {/* current state of the art */}
+            <View style={styles.container}>
+                <Text style={styles.title}>Current State of the Art</Text>
+                <Text>
+                    The current state of the art of 5G is that it is being invested in and beginning to be deployed around the world. 
+                    The actual technologies that make 5G possible have been well developed and are currently being used. There are several 
+                    countries that are investing in these large scale smart networks for their own purposes such as smart cities or 
+                    surveillance states. 
+                </Text>
+            </View>
 
           {/* future state of the art */}
-          <View>
-              
-          </View>
+          <View style={styles.container}>
+                <Text style={styles.title}>Future State of the Art</Text>
+                <Text>
+                    5G technology should not change much over the near or far future. If there were new developments or ideas that 5G could
+                    utilize well, it would have to be production ready very soon, otherwise parts of the network could lack the new technologies.
+                    The next steps that we should see in the state of the art of 5G is in prepping it for production and actually investing
+                    money into the infrastructure. It is then up to governments, states, organizations, and individuals to utilize the network
+                    for purposes such as smart cities and smart factories. 
+                </Text>
+                <View style={{display:'flex', justifyContent:'space-between', flexDirection:'row'}}>
+                    <Image style={styles.image} source={require('../content/smartCity.png')}/> 
+                    <Image style={styles.image} source={require('../content/smartFactory.jpg')}/> 
+                </View>
+            </View>
       </View>
-
-
-      <View style={styles.line}/>
       
 
     </ScrollView>
@@ -36,18 +50,25 @@ export const SOTAPage = props => {
 }
 
 const styles = StyleSheet.create({
-  container:{
-  },
-  line:{
-      marginTop:40,
-      borderBottomWidth: 0.5,
-      borderColor:'#c2c2c2' ,
-    },
-  text:{
-    fontSize:28,
-  },
-  lottie: {
-    width: 100,
-    height: 100
-  }
+    container:{
+        marginRight:'5%',
+        marginLeft:'5%',
+        marginBottom: 40
+      },
+      line:{
+          marginTop:10,
+          borderBottomWidth: 0.5,
+          borderColor:'#c2c2c2' ,
+        },
+      title:{
+        fontSize:16,
+        marginTop:10,
+        marginBottom:10,
+        borderBottomWidth: 0.5,
+        borderColor:'#c2c2c2' ,
+      },
+      image: {
+        width: 160,
+        height: 120
+      }
 });

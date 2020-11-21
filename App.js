@@ -5,7 +5,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import CustomDrawerNavigator from "./components/CustomDrawerNavigator";
 import {MainPage} from "./pages/MainPage";
 import {ResourcesPage} from "./pages/ResourcesPage";
-import {TechnicalPage} from './pages/TechnicalPage';
+import {FiveComponentsPage} from './pages/FiveComponentsPage';
 import {SpeedTestPage} from './pages/SpeedTestPage';
 import {FuturePage} from './pages/FuturePage';
 import {SOTAPage} from './pages/SOTAPage';
@@ -20,11 +20,11 @@ const MainNavigator = createDrawerNavigator(
       screen: MainPage 
     },
 
-    TechnicalPage: {
+    FiveComponentsPage: {
       navigationOptions: {
         drawerLabel: "5 Components of 5G"
       },
-      screen: TechnicalPage
+      screen: FiveComponentsPage
     },
 
     SOTAPage:{
