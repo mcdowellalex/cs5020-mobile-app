@@ -19,9 +19,9 @@ export const FuturePage = props => {
         <View style={styles.container}>
           <Text style={styles.title}>Opportunites</Text>
           <Text>
-            The major two aspects that 5G makes possible are smart cities and smart factories. The development of a smart city or factory means
+            The two major technological advancements that 5G makes possible are smart cities and smart factories. The development of a smart city or factory means
             its major dependence on a network. For example, a smart city will have public transit systems entirely connected to and run through
-            the 5G network which can run must smoother. Buses could theoretically get live updates on the state of traffic and traffic lights
+            the 5G network. Buses could theoretically get live updates on the state of traffic and traffic lights
             and dynamically find the fastest routes somewhere. 
           </Text>
           <Text>
@@ -58,6 +58,16 @@ export const FuturePage = props => {
             technology, the physical infrastructure of the network is going to be massive and expensive. With this also comes the maintenance
             of such a complex network. The way to handle such a massive network is to implement in stages. There needs to be a large scale 
             plan of implementation so that the network can be maintained. 
+          </Text>
+        </View>
+
+        <View style={styles.container}>
+          <Text style={styles.title}>What do we do?</Text>
+          <Text>
+            Connection to the internet is a necessity in todays world. Employees cannot do their work, and students cannot complete their studies 
+            without it. The obvious answer to providing this commodity to everyone is government involvement. To what extent this should be, I 
+            do not know. But, it does need to be realized that connection to the internet should be as common as electricity, and with a network 
+            as powerful as 5G, I think as a society we are capable.
           </Text>
         </View>
       

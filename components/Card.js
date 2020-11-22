@@ -6,8 +6,8 @@ export const Card = props => {
     return(
 
     <View style={styles.container}>
-        {props.text.map((link) => 
-            <Text>{link}</Text>)
+        {props.text.map((link, i) => 
+            <Text key={i}>{link}</Text>)
         }
     </View>
     
