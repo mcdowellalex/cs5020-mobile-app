@@ -6,7 +6,6 @@ import {Footer} from '../components/Footer';
 
 
 
-
 export const MainPage = props => {
 
   return (
@@ -16,6 +15,7 @@ export const MainPage = props => {
         text = "Main Page"
       />  
       <View>
+
         {/* summary of 5G */}
         <View style={styles.container}>
           <Image style={{height:75, width:80}} source={require('../content/5Glogo.jpg')}/> 
