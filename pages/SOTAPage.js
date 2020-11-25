@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, ScrollView,StyleSheet, Text, Image } from "react-native";
+import { View, ScrollView,StyleSheet, Text, Image, Dimensions } from "react-native";
 
 import CustomHeader from "../components/CustomHeader";
 
@@ -37,9 +37,9 @@ export const SOTAPage = props => {
                     money into the infrastructure. It is then up to governments, states, organizations, and individuals to utilize the network
                     for purposes such as smart cities and smart factories. 
                 </Text>
-                <View style={{display:'flex', justifyContent:'space-between', flexDirection:'row'}}>
-                    <Image style={styles.image} source={require('../content/smartCity.png')}/> 
-                    <Image style={styles.image} source={require('../content/smartFactory.jpg')}/> 
+                <View style={{alignItems:'center', marginTop:20}}>
+                    <Image style={styles.image} source={require('../content/smartCity.gif')}/> 
+                    {/* <Image style={styles.image} source={require('../content/smartFactory.jpg')}/>  */}
                 </View>
             </View>
       </View>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         borderColor:'#c2c2c2' ,
       },
       image: {
-        width: 160,
-        height: 120
+        width: 320,
+        height: 250,
       }
 });
